@@ -18,6 +18,7 @@
       background-color: #262626;
       border-radius: 8px;
       width: 1490px;
+      margin-top: -1%;
 
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
@@ -32,6 +33,7 @@
       text-align: center;
       padding: 10px 8px;
       text-decoration: none;
+      
     }
 
     li a:hover:not(.active) {
@@ -678,7 +680,7 @@ var TxtType = function(el, toRotate, period) {
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: .3em solid #000000}";
+        css.innerHTML = ".typewrite > .wrap { border-right: .2em solid #000000}";
         document.body.appendChild(css);
     };
 </script>
