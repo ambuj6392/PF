@@ -8,6 +8,7 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  
 
   <style>
     ul {
@@ -46,6 +47,22 @@
 
     }
 
+    #freeform {
+      border-color: blue;
+      box-shadow: 3px 3px 4px rgba(14, 101, 241, 0.372);
+      width: 60%;
+      height: 30%;
+      caret-color: black; /* Add caret-color property to specify the color of the cursor */
+      animation: blink-caret 1s infinite;
+      margin-left: 20%;
+      font-size: 20px; /* Set the font size */
+
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: black; }
+    }
 
 
   </style>
@@ -317,12 +334,9 @@
 
 
             <p style="font-size:20px; color:#0d0d0d;">
-              ⏩ Executed end-to-end ML projects involving data cleaning and preprocessing efficiency by 90%.<br>
-              ⏩ Conducted exploratory data analysis (4+ EDA) on diverse datasets, enhancing insights and predictive
-              capabilities.<br>
-              ⏩ Developed and fine-tuned ML models including linear regression, logistic regression, decision trees, and
-              random forests
-              with 80% accuracy.
+              ⏩ worked on ML algorithms, including linear regression, decision trees, and random forests data cleaning and preprocessing. <br>
+              ⏩ Conducted exploratory data analysis (EDA) and statistical analysis (Descriptive, Inferential) on diverse datasets. <br>
+              ⏩ Developed projects including Electric Vehicle Data Analysis using Excel and Amazon Sales Dashboard using PowerBi.
             </p>
 
 
@@ -340,9 +354,9 @@
           </h2>
           <div class="article-container">
             <p style="font-size:20px; color:#0d0d0d;">
-              ⏩ Accomplished end-to-end ML project which will predict the flight ticket price on various factors.<br>
-              ⏩ Implemented various ML models and Django framework to do prediction with 90% accuracy.<br>
-              ⏩ Maximized Python libraries (Pandas, NumPy, Matplotlib, Seaborn, Sklearn) for robust analysis.
+              ⏩ Built a predictive model using machine learning that will predict the flight ticket price based on various factors.<br>
+              ⏩ Contributed to Data Collection, conducted (EDA), engaged in Model Selection, Training and Model Evaluation.<br>
+              ⏩ Maximized Python libraries such as Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn for robust analysis.
             </p>
           </div>
         </div>
@@ -630,6 +644,12 @@
         <p>+916392298514</p>
       </div>
     </div>
+    </div>
+    <label for="w3review" style="margin-left: 20%; font-size: 20px;" >Feedback/Suggestion/Message:</label>
+    <textarea id="freeform" name="freeform" rows="10" cols="50">Write Here...</textarea><br>
+    <button class="btn btn-color-2 project-btn" style="margin-left: 20%;">
+      Submit
+    </button>
   </section>
   <footer>
 
