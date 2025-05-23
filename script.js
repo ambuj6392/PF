@@ -1,4 +1,4 @@
-```javascript
+
 // Typewriter Effect
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
@@ -63,4 +63,3 @@ function toggleMenu() {
   hamburger.classList.toggle('open');
   menu.classList.toggle('open');
 }
-```
