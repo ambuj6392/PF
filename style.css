@@ -203,13 +203,10 @@ section {
 /* Profile Section */
 .profile-container {
   display: flex;
-  flex-direction: row; /* Changed to row-reverse */
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   text-align: center;
   padding: 4rem 0;
-  gap: 3rem;
-  flex-wrap: wrap;
 }
 
 .profile-pic {
