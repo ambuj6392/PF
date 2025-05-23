@@ -209,26 +209,144 @@
 
 
   
-  
-  <section id="skills">
-    <p class="section__text__p1" style="text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px blue;">
-      Explore My</p>
-    <h1 class="title" style="text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px blue;">SKILLS</h1>
 
-   <div class="details-container" style="background-color:#99ccff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);">
-     <h2 class="experience-sub-title" style="color: #0d0d0d;"><u>Technical Skills</u></h2>
-     <div class="article-container">
-      <h3 style="text-align: left;"><u style="color: #d81818;">Data Analysis & Visualization:</u>    Python, SQL, Looker Studio, Excel, Data Cleaning, Data Transformation</h3>
-      <h3 style="text-align: left;"><u style="color: #d81818;">Machine Learning:</u>    Regression, Classification, Clustering, Feature engineering</h3>
-      <h3 style="text-align: left;"><u style="color: #d81818;">MLOps:</u> MLFlow, DVC, CI/CD, Docker, Kubernetes, Jenkins, GitHub, minikube, Kubeflow, Dagshub, Grafan</h3>
-      <h3 style="text-align: left;"><u style="color: #d81818;">Database & Cloud:</u> Google Cloud Platform (GCp), Bigquery</h3>
-      <h3 style="text-align: left;"><u style="color: #d81818;">Frameworks & Libraries:</u> Pandas, Numpy, Scikit-learn, Jupyter Notebook, VS Code, flask</h3>
- 
+<!-- --------------------------------------------- -->
+<section id="skills" class="skills-section">
+  <div class="section-header">
+    <p class="section-subtitle">Explore My</p>
+    <h1 class="section-title">Skills</h1>
+  </div>
+  <div class="skills-container">
+    <h2 class="skills-category">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h3>Data Analysis & Visualization</h3>
+        <p>Python, SQL, Looker Studio, Excel, Data Cleaning, Data Transformation</p>
+      </div>
+      <div class="skill-item">
+        <h3>Machine Learning</h3>
+        <p>Regression, Classification, Clustering, Feature Engineering</p>
+      </div>
+      <div class="skill-item">
+        <h3>MLOps</h3>
+        <p>MLFlow, DVC, CI/CD, Docker, Kubernetes, Jenkins, GitHub, Minikube, Kubeflow, Dagshub, Grafana</p>
+      </div>
+      <div class="skill-item">
+        <h3>Database & Cloud</h3>
+        <p>Google Cloud Platform (GCP), BigQuery</p>
+      </div>
+      <div class="skill-item">
+        <h3>Frameworks & Libraries</h3>
+        <p>Pandas, NumPy, Scikit-learn, Jupyter Notebook, VS Code, Flask</p>
+      </div>
     </div>
   </div>
-</div> 
-  </section>
+</section>
 
+<style>
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #f5f7fa;
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #1f2937;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  border-bottom: 2px solid #3b82f6;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item h3 {
+  font-size: 1.3rem;
+  color: #3b82f6;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+  <!-- --------------------------------------------- -->
 
 
   <section id="experience">
