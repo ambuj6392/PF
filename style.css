@@ -203,7 +203,7 @@ section {
 /* Profile Section */
 .profile-container {
   display: flex;
-  flex-direction: row-reverse; /* Changed to row-reverse */
+  flex-direction: row; /* Changed to row-reverse */
   align-items: center;
   justify-content: center;
   text-align: center;
