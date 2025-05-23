@@ -560,6 +560,14 @@ footer {
   color: white;
 }
 
+.card-icon {
+  width: 24px;
+  height: 24px;
+  max-width: 100%;
+  vertical-align: middle;
+  cursor: default;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   section {
