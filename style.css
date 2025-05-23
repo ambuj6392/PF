@@ -307,155 +307,64 @@ section {
   color: #4b5563;
 }
 
-/* Icon Styles */
-.icon {
-  width: 24px;
-  height: 24px;
-  max-width: 100%;
-  vertical-align: middle;
-  cursor: default;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-}
-
 /* Experience Section */
 .experience-container {
-  position: relative;
-  padding: 2rem 0;
-}
-
-.timeline {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  background: linear-gradient(to bottom, #3b82f6, #60a5fa);
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-.timeline-item {
-  position: relative;
-  margin: 2rem 0;
   display: flex;
-  align-items: flex-start;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
-  animation-delay: calc(0.2s * var(--index));
-}
-
-.timeline-item:nth-child(1) {
-  --index: 1;
-}
-
-.timeline-item:nth-child(2) {
-  --index: 2;
-}
-
-.timeline-item:nth-child(3) {
-  --index: 3;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.timeline-item[data-side="left"] .experience-card {
-  margin-right: 60px;
-  margin-left: 20px;
-}
-
-.timeline-item[data-side="right"] .experience-card {
-  margin-left: 60px;
-  margin-right: 20px;
-}
-
-.timeline-marker {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background-color: #3b82f6;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  z-index: 1;
-  transition: background-color 0.3s ease;
-}
-
-.timeline-marker:hover {
-  background-color: #2563eb;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .experience-card {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 80px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
 .experience-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #3b82f6;
+  border-radius: 2px;
 }
 
 .job-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #1f2937;
   margin-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.job-title strong {
-  color: #3b82f6;
-  font-weight: 800;
 }
 
 .job-location, .job-duration {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #6b7280;
-  font-style: italic;
 }
 
 .job-role {
-  font-weight: 700;
+  font-weight: 600;
   color: #1f2937;
-  font-size: 1.3rem;
 }
 
 .job-details {
   list-style: none;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #4b5563;
 }
 
 .job-details li {
   position: relative;
-  padding-left: 1.8rem;
-  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .job-details li::before {
@@ -463,18 +372,7 @@ section {
   position: absolute;
   left: 0;
   color: #3b82f6;
-  font-size: 1.3rem;
-}
-
-.tech-tag {
-  display: inline-block;
-  background-color: #e5e7eb;
-  color: #1f2937;
-  padding: 0.3rem 0.7rem;
-  border-radius: 1rem;
-  font-size: 0.9rem;
-  margin: 0 0.3rem;
-  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /* Skills Section */
@@ -662,6 +560,7 @@ footer {
   color: white;
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   section {
@@ -694,25 +593,8 @@ footer {
     flex-direction: column;
   }
 
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .timeline-item[data-side="left"] .experience-card,
-  .timeline-item[data-side="right"] .experience-card {
-    margin-left: 50px;
-    margin-right: 20px;
-    width: calc(100% - 70px);
-  }
-
-  .timeline-marker {
-    left: 20px;
-    transform: none;
+  .experience-card::before {
+    display: none;
   }
 
   .projects-container {
@@ -721,11 +603,6 @@ footer {
 
   .certificates-container {
     grid-template-columns: 1fr;
-  }
-
-  .icon {
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -741,21 +618,13 @@ footer {
   .profile-text h2 {
     font-size: 1.5rem;
   }
+}
 
-  .job-title {
-    font-size: 1.4rem;
-  }
-
-  .job-role {
-    font-size: 1.2rem;
-  }
-
-  .job-details {
-    font-size: 1rem;
-  }
-
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
+/* Icon Styles */
+.icon {
+  width: 24px;
+  height: 24px;
+  max-width: 100%;
+  vertical-align: middle;
+  cursor: default;
 }
