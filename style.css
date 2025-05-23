@@ -563,7 +563,7 @@ footer {
 .card-icon {
   width: 10px;
   height: 10px;
-  max-width: 100%;
+  max-width: 10%;
   vertical-align: middle;
   cursor: default;
 }
