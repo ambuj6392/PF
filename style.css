@@ -203,10 +203,13 @@ section {
 /* Profile Section */
 .profile-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Changed to row */
   align-items: center;
+  justify-content: center; /* Centers items horizontally */
   text-align: center;
   padding: 4rem 0;
+  gap: 3rem; /* Adds spacing between items */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .profile-pic {
