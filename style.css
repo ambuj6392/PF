@@ -238,7 +238,7 @@ section {
   margin: 1.5rem 0;
   justify-content: center; /* Horizontally centers the button */
   align-items: center; /* Vertically centers the button */
-  place-items: center;
+
 }
 
 .socials-container {
