@@ -393,7 +393,7 @@ section {
 }
 
 .skill-card {
-  background-color: #ddeaf6;
+  background-color: #e6eff8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -423,7 +423,7 @@ section {
 }
 
 .project-card {
-  background-color: #ffffff;
+  background-color: #f8fafc;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
