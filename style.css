@@ -378,7 +378,7 @@ section {
   font-size: 1.2rem;
 }
 
-/* Skills Section */
+/* Skills Section #f8fafc*/
 .skills-container {
   background-color: #ffffff;
   padding: 2rem;
@@ -393,7 +393,7 @@ section {
 }
 
 .skill-card {
-  background-color: #f8fafc;
+  background-color: #ddeaf6;
   padding: 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s ease;
