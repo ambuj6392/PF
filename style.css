@@ -323,7 +323,7 @@ section {
 }
 
 .experience-card {
-  background-color: #e6eff8;
+  background-color: #f8fafc;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -350,7 +350,7 @@ section {
   font-size: 1.5rem;
   color: #1f2937;
   margin-bottom: 1rem;
-  justify-content: center;
+  text-align: center;
 }
 
 .job-location, .job-duration {
