@@ -244,6 +244,8 @@ section {
 .socials-container {
   display: flex;
   gap: 1rem;
+  justify-content: center; /* Horizontally centers the button */
+  align-items: center; /* Vertically centers the button */
 }
 
 .social-icon {
