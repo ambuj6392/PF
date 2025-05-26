@@ -4,48 +4,92 @@
 <head>
 
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        #profile {
-            padding: 50px 20px;
-            background-color: #fff;
+<style>
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            flex-direction: column; /* Changed to column for better flow with skills */
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 4rem 0;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        #profile h2 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 20px;
+        .profile-pic {
+            width: 300px; /* Reduced size to balance with skills grid */
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1rem;
         }
 
-        #profile p {
-            font-size: 1.2em;
-            color: #666;
+        .profile-text {
             max-width: 600px;
-            margin: 0 auto 30px;
         }
 
+        .profile-text h1 {
+            font-size: 2.5rem; /* Slightly reduced for balance */
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0.5rem 0;
+        }
+
+        .profile-text h2 {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin: 0.5rem 0;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .socials-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1rem;
             justify-items: center;
-            padding: 0 20px;
+            padding: 1rem 0;
+            width: 100%;
+            max-width: 600px;
         }
 
         .skill-item {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background-color: #f9f9f9;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: fadeIn 1s ease-in forwards;
@@ -63,40 +107,53 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            padding: 10px;
+            padding: 8px;
         }
 
         .skill-item:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
+            0% { opacity: 0; transform: translateY(15px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Responsive design */
         @media (max-width: 600px) {
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-text h1 {
+                font-size: 2rem;
+            }
+
+            .profile-text h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
             .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+                gap: 0.8rem;
             }
 
             .skill-item {
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
             }
 
-            #profile h2 {
-                font-size: 2em;
-            }
-
-            #profile p {
-                font-size: 1em;
+            .btn-container {
+                flex-direction: column;
             }
         }
     </style>
-
 
 
 
@@ -143,50 +200,47 @@
     </div>
   </nav>
 
-  <section id="profile">
-    <div class="profile-container">
-      <img src="./assets/picofme (7).png" alt="Ambuj Nayan Mishra profile picture" class="profile-pic" />
-      <div class="profile-text">
-        <p class="section-subtitle">Hello, I'm</p>
-        <h1 class="section-title">Ambuj Nayan Mishra</h1>
-        <h2 class="typewrite" data-period="2000" data-type='["Data Analyst", "Machine Learning Engineer"]'>
-          <span class="wrap"></span>
-        </h2>
-        <div class="btn-container">
-          <a href="./assets/Ambuj Resume.pdf" class="btn btn-color-1" download>Download Resume</a>
-          <a href="#contact" class="btn btn-color-2">Contact Me</a>
-        <div class="socials-container">
-          <a href="https://www.linkedin.com/in/ambuj-/" aria-label="LinkedIn Profile">
-            <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon" />
-          </a>
-          <a href="https://github.com/ambuj6392" aria-label="GitHub Profile">
-            <img src="./assets/github.png" alt="GitHub" class="social-icon" />
-          </a>
+<section id="profile">
+        <div class="profile-container">
+            <img src="./assets/picofme (7).png" alt="Ambuj Nayan Mishra profile picture" class="profile-pic" />
+            <div class="profile-text">
+                <p class="section-subtitle">Hello, I'm</p>
+                <h1 class="section-title">Ambuj Nayan Mishra</h1>
+                <h2 class="typewrite" data-period="2000" data-type='["Data Analyst", "Machine Learning Engineer"]'>
+                    <span class="wrap"></span>
+                </h2>
+                <div class="btn-container">
+                    <a href="./assets/Ambuj Resume.pdf" class="btn btn-color-1" download>Download Resume</a>
+                    <a href="#contact" class="btn btn-color-2">Contact Me</a>
+                    <div class="socials-container">
+                        <a href="https://www.linkedin.com/in/ambuj-/" aria-label="LinkedIn Profile">
+                            <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon" />
+                        </a>
+                        <a href="https://github.com/ambuj6392" aria-label="GitHub Profile">
+                            <img src="./assets/github.png" alt="GitHub" class="social-icon" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="./assets/python-logo.png.png" alt="Python Logo">
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/pngwing.com (1).png" alt="SQL Logo">
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/powerbi.png" alt="Power BI Logo">
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/Pandas.png" alt="Pandas Logo">
+                </div>
+                <div class="skill-item">
+                    <img src="./assets/seaborn Logo Vector.png" alt="Seaborn Logo">
+                </div>
+            </div>
         </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-grid">
-            <div class="skill-item">
-                <img src="./assets/python-logo.png.png" alt="Python Logo">
-            </div>
-            <div class="skill-item">
-                <img src="./assets/pngwing.com (1).png" alt="SQL Logo">
-            </div>
-            <div class="skill-item">
-                <img src="./assets/powerbi.png" alt="Power BI Logo">
-            </div>
-            <div class="skill-item">
-                <img src="./assets/Pandas.png" alt="Pandas Logo">
-            </div>
-            <div class="skill-item">
-                <img src="./assets/seaborn Logo Vector.png" alt="Seaborn Logo">
-            </div>
-      </div>
-    
-
-  </section>
+    </section>
 
   <section id="about">
     <p class="section-subtitle">Get to Know More</p>
