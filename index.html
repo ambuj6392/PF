@@ -7,7 +7,7 @@
 
 
 
-    <style>
+   <style>
         /* Profile Section */
         .profile-container {
             display: flex;
@@ -76,7 +76,7 @@
             width: 100%;
             max-width: 1200px;
             overflow: hidden;
-            margin-top: -4 rem;
+            margin-top: -4rem;
         }
 
         .skills-ticker {
@@ -109,8 +109,8 @@
         }
 
         @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         /* Pause animation on hover */
@@ -174,11 +174,10 @@
             }
 
             .skills-ticker {
-                animation: ticker 30s linear infinite; /* Faster on mobile */
+                animation: ticker 15s linear infinite; /* Faster on mobile */
             }
         }
     </style>
-
 
 
 
