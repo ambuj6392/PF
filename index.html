@@ -2,6 +2,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
+
+
+  <style>
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 0;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-pic-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .profile-pic {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .profile-text h2 {
+            font-size: 1.8rem;
+            color: #3b82f6;
+            margin: 1rem 0;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .socials-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Skills Orbit */
+        .skills-orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px; /* Orbit diameter */
+            height: 500px;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .skill-item {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-in forwards;
+            opacity: 0;
+        }
+
+        .skill-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+        }
+
+        /* Position logos in a circle */
+        .skill-item:nth-child(1) { transform: rotate(0deg) translate(250px) rotate(0deg); animation-delay: 0.2s; }
+        .skill-item:nth-child(2) { transform: rotate(72deg) translate(250px) rotate(-72deg); animation-delay: 0.4s; }
+        .skill-item:nth-child(3) { transform: rotate(144deg) translate(250px) rotate(-144deg); animation-delay: 0.6s; }
+        .skill-item:nth-child(4) { transform: rotate(216deg) translate(250px) rotate(-216deg); animation-delay: 0.8s; }
+        .skill-item:nth-child(5) { transform: rotate(288deg) translate(250px) rotate(-288deg); animation-delay: 1.0s; }
+
+        .skill-item:hover {
+            transform: scale(1.2) translate(250px); /* Maintain orbit position on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(15px) rotate(0deg); }
+            100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 800px) {
+            .profile-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .profile-pic-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .profile-pic {
+                width: 250px;
+                height: 250px;
+            }
+
+            .skills-orbit {
+                width: 350px;
+                height: 350px;
+            }
+
+            .skill-item {
+                width: 50px;
+                height: 50px;
+            }
+
+            .skill-item:nth-child(1) { transform: rotate(0deg) translate(175px) rotate(0deg); }
+            .skill-item:nth-child(2) { transform: rotate(72deg) translate(175px) rotate(-72deg); }
+            .skill-item:nth-child(3) { transform: rotate(144deg) translate(175px) rotate(-144deg); }
+            .skill-item:nth-child(4) { transform: rotate(216deg) translate(175px) rotate(-216deg); }
+            .skill-item:nth-child(5) { transform: rotate(288deg) translate(175px) rotate(-288deg); }
+
+            .skill-item:hover {
+                transform: scale(1.2) translate(175px);
+            }
+
+            .profile-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .profile-text h2 {
+                font-size: 1.4rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .profile-pic-container {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skills-orbit {
+                width: 300px;
+                height: 300px;
+            }
+
+            .skill-item {
+                width: 40px;
+                height: 40px;
+            }
+
+            .skill-item:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
+            .skill-item:nth-child(2) { transform: rotate(72deg) translate(150px) rotate(-72deg); }
+            .skill-item:nth-child(3) { transform: rotate(144deg) translate(150px) rotate(-144deg); }
+            .skill-item:nth-child(4) { transform: rotate(216deg) translate(150px) rotate(-216deg); }
+            .skill-item:nth-child(5) { transform: rotate(288deg) translate(150px) rotate(-288deg); }
+
+            .skill-item:hover {
+                transform: scale(1.2) translate(150px);
+            }
+
+            .btn-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Ambuj Nayan Mishra, Data Analyst and Machine Learning Engineer" />
@@ -45,30 +259,49 @@
     </div>
   </nav>
 
-  <section id="profile">
-    <div class="profile-container">
-      <img src="./assets/picofme (7).png" alt="Ambuj Nayan Mishra profile picture" class="profile-pic" />
-      <div class="profile-text">
-        <p class="section-subtitle">Hello, I'm</p>
-        <h1 class="section-title">Ambuj Nayan Mishra</h1>
-        <h2 class="typewrite" data-period="2000" data-type='["Data Analyst", "Machine Learning Engineer"]'>
-          <span class="wrap"></span>
-        </h2>
-        <div class="btn-container">
-          <a href="./assets/Ambuj Resume.pdf" class="btn btn-color-1" download>Download Resume</a>
-          <a href="#contact" class="btn btn-color-2">Contact Me</a>
-        <div class="socials-container">
-          <a href="https://www.linkedin.com/in/ambuj-/" aria-label="LinkedIn Profile">
-            <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon" />
-          </a>
-          <a href="https://github.com/ambuj6392" aria-label="GitHub Profile">
-            <img src="./assets/github.png" alt="GitHub" class="social-icon" />
-          </a>
+<section id="profile">
+        <div class="profile-container">
+            <div class="profile-pic-container">
+                <img src="./assets/picofme (7).png" alt="Ambuj Nayan Mishra profile picture" class="profile-pic" />
+                <div class="skills-orbit">
+                    <div class="skill-item">
+                        <img src="./assets/python-logo.png" alt="Python Logo">
+                    </div>
+                    <div class="skill-item">
+                        <img src="./assets/pngwing.com (1).png" alt="SQL Logo">
+                    </div>
+                    <div class="skill-item">
+                        <img src="./assets/powerbi.png" alt="Power BI Logo">
+                    </div>
+                    <div class="skill-item">
+                        <img src="./assets/Pandas.png" alt="Pandas Logo">
+                    </div>
+                    <div class="skill-item">
+                        <img src="./assets/seaborn Logo Vector.png" alt="Seaborn Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="profile-text">
+                <p class="section-subtitle">Hello, I'm</p>
+                <h1 class="section-title">Ambuj Nayan Mishra</h1>
+                <h2 class="typewrite" data-period="2000" data-type='["Data Analyst", "Machine Learning Engineer"]'>
+                    <span class="wrap"></span>
+                </h2>
+                <div class="btn-container">
+                    <a href="./assets/Ambuj Resume.pdf" class="btn btn-color-1" download>Download Resume</a>
+                    <a href="#contact" class="btn btn-color-2">Contact Me</a>
+                    <div class="socials-container">
+                        <a href="https://www.linkedin.com/in/ambuj-/" aria-label="LinkedIn Profile">
+                            <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon" />
+                        </a>
+                        <a href="https://github.com/ambuj6392" aria-label="GitHub Profile">
+                            <img src="./assets/github.png" alt="GitHub" class="social-icon" />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <section id="about">
     <p class="section-subtitle">Get to Know More</p>
