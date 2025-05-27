@@ -63,3 +63,16 @@ function toggleMenu() {
   hamburger.classList.toggle('open');
   menu.classList.toggle('open');
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const skillTags = document.querySelectorAll('.skill-tag');
+  skillTags.forEach(tag => {
+    tag.addEventListener('mouseenter', () => {
+      const tooltip = tag.dataset.tooltip;
+      if (tooltip) {
+        tag.setAttribute('aria-label', tooltip);
+      }
+    });
+  });
+});
