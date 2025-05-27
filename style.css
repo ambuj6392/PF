@@ -258,61 +258,156 @@ section {
   transform: scale(1.1);
 }
 
-/* About Section */
-.about-container {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.about-pic-container {
-  flex: 1;
-}
-
-.about-pic {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 1rem;
-}
-
-.about-details {
-  flex: 2;
-}
-
-.about-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 1rem;
+/* About Section - New Design */
+.about-section {
+  padding: 80px 0;
+  background-color: #f9fafb; /* Light background for separation */
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  font-size: 1.3rem;
-  color: #3b82f6;
+.about-section .section-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
-.card p {
-  font-size: 1rem;
-  color: #4b5563;
+.about-section .section-title {
+  font-size: 2.8rem;
+  color: #1f2937;
+  margin-bottom: 3rem;
 }
 
-.about-text p {
-  font-size: 1.1rem;
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stack vertically on small screens */
+  align-items: center;
+  gap: 3rem; /* Space between image and text */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 992px) { /* Larger screens: side-by-side */
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.about-image-wrapper {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  width: 100%;
+  max-width: 350px; /* Control image size */
+  background-color: #ffffff; /* Card-like background for image */
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-main-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem; /* Slightly rounded corners for the image itself */
+}
+
+.about-info {
+  flex-grow: 1;
+  max-width: 700px; /* Limit text width for readability */
+}
+
+.about-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 2.5rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for cards */
+  gap: 1.5rem;
+  text-align: left; /* Align text within cards */
+}
+
+.highlight-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card h3 {
+  font-size: 1.4rem;
+  color: #2563eb; /* A distinct blue for headings */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eff6ff; /* Subtle separator */
+  padding-bottom: 0.5rem;
+}
+
+.highlight-card ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.highlight-card ul li {
+  font-size: 1rem;
   color: #4b5563;
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.5rem; /* Space for custom bullet */
+}
+
+.highlight-card ul li::before {
+  content: "•"; /* Custom bullet point */
+  color: #2563eb;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-section .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .about-image-wrapper {
+    max-width: 300px;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
 }
 
 /* Experience Section */
